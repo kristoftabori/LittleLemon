@@ -6,7 +6,9 @@ class Booking(models.Model):
     booking_date = models.DateField(null=True)
 
     def __str__(self) -> str:
-        return f"{self.name} and {str(self.no_of_guests)} on {self.booking_date}"
+        if self.no_of_guests > 0:
+            return f"{self.name} and {str(self.no_of_guests)} on {self.booking_date}"
+        return f"{self.name} alone on {self.booking_date}"
 
 
 class Menu(models.Model):

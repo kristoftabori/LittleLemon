@@ -1,5 +1,6 @@
 # LittleLemon
-This is the capstone project for the Coursera course Meta Back-End Developer Professional Certificate
+This is the capstone project for the Coursera course Meta Back-End Developer Professional Certificate.
+
 
 # The API endpoints implemented
 ## Basic functionalities
@@ -43,3 +44,14 @@ It accepts only the following request type:
 It accepts only the following request type:
 * POST
 
+## Installation and troubleshooting
+I've used Pipenv for virtual environment management, because it requires less space to store.
+In order to make it work, please go to the directory where the **```Pipfile```** is located. Run the following commands in the terminal:
+
+    pipenv shell
+    pipenv install
+
+In case there is no python 3.10 installed on your computer, please amend the following line in **```Pipfile```**:
+
+    [requires]
+    python_version = "3.10"

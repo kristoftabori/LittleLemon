@@ -4,10 +4,13 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateAPIView, De
 from rest_framework.viewsets import ModelViewSet
 from rest_framework import permissions
 
-from .models import Booking, Menu
 from django.contrib.auth.models import User
+from django.shortcuts import render
+from .models import Booking, Menu
 from .serializers import BookingSerializer, MenuSerializer, UserSerializer
 
+def index(request):
+    return render(request, 'index.html', {})
 
 class BookingView(APIView):
 
